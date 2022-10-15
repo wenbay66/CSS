@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- reset CSS -->
+  <link rel="stylesheet" href="../reset.css">
+  <link rel="stylesheet" href="./index.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            'spin-slow': 'spin 1s linear infinite',
+          }
+        }
+      }
+    }
+  </script>
+  <title>LoadingPage1</title>
+</head>
+
+<body>
+  <div class="fixed top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center bg-cyan-400">
+    <div 
+      class='
+        circle w-64 h-64 rounded-full
+        border-solid 
+        border-8
+        border-t-cyan-300
+        border-r-cyan-100
+        border-b-cyan-100
+        border-l-cyan-100
+      '
+    ></div>
+
+    <h1 class="uppercase mt-[2rem] text-[7rem] tracking-widest">
+      <span class="text-loading" data-text-preloader="a">A</span>
+      <span class="text-loading" data-text-preloader="r">r</span>
+      <span class="text-loading" data-text-preloader="i">i</span>
+      <span class="text-loading" data-text-preloader="e">e</span>
+      <span class="text-loading" data-text-preloader="a">a</span>
+      <span class="text-loading" data-text-preloader="n">n</span>
+    </h1>
+
+    <h1 class="uppercase mt-[2rem] text-[7rem] tracking-widest">
+      <span class="text-loading1" data-text-preloader="工">工</span>
+      <span class="text-loading1" data-text-preloader="智">智</span>
+      <span class="text-loading1" data-text-preloader="聯">聯</span>
+    </h1>
+    
+  </div>
+</body>
+</html>

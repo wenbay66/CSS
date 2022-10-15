@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #042104;
+  /* animation: animateColor 8s linear infinite; */
+}
+
+section .container {
+  display: flex;
+}
+
+section .container .circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  /* margin: 0 -7.5px; */
+}
+
+section .container .circle span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(calc(18deg * var(--i)));
+  /* background-color: red; */
+  /* 360/20 = 18 */
+}
+
+section .container .circle span::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: 0;
+  top: calc(50% - 7.5px);
+  background: #00ff0a;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00FF0A,
+  0 0 20px #00FF0A,
+  0 0 40px #00FF0A,
+  0 0 60px #00FF0A,
+  0 0 80px #00FF0A,
+  0 0 100px #00FF0A;
+  transform: scale(.1);
+  animation: animate 4s linear infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(1);
+  }
+  50%, 100% {
+    transform: scale(0.1);
+  }
+}
+
+section .container .circle:nth-child(2) {
+  transform: rotate(-180deg);
+}
+
+section .container .circle:nth-child(2) span::before {
+  animation-delay: calc(-0.1s * var(--i));
+}
+
+
+/* -------------------------------------- */
+
+.container1 {
+  position: relative;
+}
+
+.box {
+  display: flex;
+  margin-top: 100px;
+  gap: 5px;
+}
+
+.box span {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #28aef1;
+  box-shadow: 0 0 10px #28aef1,0 0 20px #28aef1;
+  transform: scale(.1);
+  animation: boxanimate 4s linear infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes boxanimate {
+  0% {
+    transform: scale(1);
+  }
+
+  50%, 100% {
+    transform: scale(0.1);
+  }
+}
+
+.box:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.box:nth-child(2) span {
+  animation-delay: calc(-0.1s * var(--i));
+}
+
+@keyframes boxanimate1 {
+  0% {
+    transform: scale(0.1);
+  }
+
+  50%, 100% {
+    transform: scale(1);
+  }
+}

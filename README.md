@@ -1,9 +1,12 @@
 >### 文字特效
-* Text-Animation
+* Text-Animation1
+* Text-Animation2
+
+>### Loading Page
 * LoadingPage1
 
-### Loading Page
-* LoadingPage1
+>### 進度條
+* SkillsBar1
 
->### 照順序一個一個亮起來的動畫
+>### 動畫
 * Infinity

@@ -1,0 +1,55 @@
+html {
+  font-size: 12px;
+}
+
+.text-loading {
+  font-family: 'Lexend', sans-serif;
+  color: transparent;
+  display: inline-block;
+  position: relative;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(235, 241, 243);
+}
+
+.text-loading:before {
+  animation: letters-loading 5s infinite ease; 
+  color: rgb(253, 255, 255);
+  content: attr(data-text-preloader);
+  left: 0;
+  opacity: 0;
+  top:0;
+  position: absolute;
+}
+
+.text-loading:nth-child(2):before {animation-delay: 0.4s;}
+.text-loading:nth-child(3):before {animation-delay: 0.8s;}
+.text-loading:nth-child(4):before {animation-delay: 1.2s;}
+.text-loading:nth-child(5):before {animation-delay: 1.6s;}
+.text-loading:nth-child(6):before {animation-delay: 2s;}
+
+@keyframes letters-loading {
+  0% {
+    opacity: 0;
+    transform: rotateY(-90deg);
+  }
+
+  25% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+
+  75% {
+    opacity: 0;
+    transform: rotateY(-90deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotateY(-90deg);
+  }
+}
